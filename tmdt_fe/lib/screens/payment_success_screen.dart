@@ -20,7 +20,7 @@ class PaymentSuccessScreen extends StatelessWidget {
       final left = s.length - i - 1;
       if (left > 0 && left % 3 == 0) buf.write('.');
     }
-    return '${buf.toString()} đ';
+    return '${buf.toString()} VND';
   }
 
   @override

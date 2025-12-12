@@ -24,7 +24,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
       final left = s.length - i - 1;
       if (left > 0 && left % 3 == 0) b.write('.');
     }
-    return '${b.toString()} đ';
+    return '${b.toString()} VND';
   }
 
   Color statusColor(String? s) {

@@ -61,7 +61,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       final left = s.length - i - 1;
       if (left > 0 && left % 3 == 0) buf.write('.');
     }
-    return '${buf.toString()} đ';
+    return '${buf.toString()} VND';
   }
 
   Future<void> _doCheckout() async {
@@ -255,7 +255,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                      'Mã hợp lệ, giảm ${info['discountAmount'] ?? 0} đ',
+                                      'Mã hợp lệ, giảm ${info['discountAmount'] ?? 0} VND',
                                     ),
                                     backgroundColor: Colors.green,
                                   ),

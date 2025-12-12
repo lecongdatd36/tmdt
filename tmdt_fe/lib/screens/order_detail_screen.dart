@@ -41,7 +41,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
       final left = s.length - i - 1;
       if (left > 0 && left % 3 == 0) b.write('.');
     }
-    return '${b.toString()} đ';
+    return '${b.toString()} VND';
   }
 
   String statusText(String? s) {

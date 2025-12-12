@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/cart_provider.dart';
-import 'checkout_screen.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../utils/url_utils.dart';
 import '../widgets/gradient_app_bar.dart';
@@ -108,7 +107,7 @@ class _CartScreenState extends State<CartScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Giá: ${price.toStringAsFixed(0)} đ',
+                                  'Giá: ${price.toStringAsFixed(0)} VND',
                                   style: const TextStyle(fontSize: 14),
                                 ),
                                 const SizedBox(height: 4),
@@ -199,7 +198,7 @@ class _CartScreenState extends State<CartScreen> {
                                 final p = double.tryParse(item['price']?.toString() ?? item['product']?['price']?.toString() ?? '0') ?? 0;
                                 final q = item['quantity'] ?? 1;
                                 return sum + (p * q);
-                              }).toStringAsFixed(0)} đ',
+                              }).toStringAsFixed(0)} VND',
                               style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
