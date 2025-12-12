@@ -6,6 +6,7 @@ import '../utils/url_utils.dart';
 import 'product_detail_screen.dart';
 import '../widgets/gradient_app_bar.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import '../utils/money.dart';
 
 class FavoritesScreen extends StatefulWidget {
   const FavoritesScreen({super.key});
@@ -146,7 +147,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                   ),
                                   const SizedBox(height: 4),
                                   Text(
-                                    '${p['price']}đ',
+                                    moneyVnd(p['price']),
                                     style: TextStyle(
                                       color: Colors.blue.shade700,
                                       fontWeight: FontWeight.bold,

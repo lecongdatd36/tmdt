@@ -5,6 +5,7 @@ import '../utils/url_utils.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../widgets/reviews_section.dart';
 import '../widgets/gradient_app_bar.dart';
+import '../utils/money.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   final Map<String, dynamic> product;
@@ -81,7 +82,7 @@ class ProductDetailScreen extends StatelessWidget {
                           ),
                           const SizedBox(width: 12),
                           Text(
-                            '${product['price']}đ',
+                            moneyVnd(product['price']),
                             textAlign: TextAlign.right,
                             style: TextStyle(
                               color: Colors.blue.shade700,

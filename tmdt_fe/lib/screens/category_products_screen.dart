@@ -4,6 +4,7 @@ import '../utils/url_utils.dart';
 import 'product_detail_screen.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../widgets/gradient_app_bar.dart';
+import '../utils/money.dart';
 
 class CategoryProductsScreen extends StatefulWidget {
   final String? category;
@@ -132,7 +133,7 @@ class _CategoryProductsScreenState extends State<CategoryProductsScreen> {
                                 ),
                                 const SizedBox(height: 4),
                                 Text(
-                                  '${p['price']}đ',
+                                  moneyVnd(p['price']),
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.blue.shade700,

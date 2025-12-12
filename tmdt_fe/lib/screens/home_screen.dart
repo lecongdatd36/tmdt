@@ -10,6 +10,7 @@ import '../widgets/skeleton.dart';
 import 'package:provider/provider.dart';
 import '../providers/wishlist_provider.dart';
 import '../services/banner_service.dart';
+import '../utils/money.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -500,7 +501,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                         ),
                                         const SizedBox(height: 4),
                                         Text(
-                                          '${p['price']}đ',
+                                          moneyVnd(p['price']),
                                           style: TextStyle(
                                             color: Colors.blue.shade700,
                                             fontWeight: FontWeight.bold,

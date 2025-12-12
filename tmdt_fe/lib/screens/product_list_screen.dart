@@ -6,6 +6,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import '../widgets/gradient_app_bar.dart';
 import 'product_detail_screen.dart';
 import '../widgets/skeleton.dart';
+import '../utils/money.dart';
 
 class ProductListScreen extends StatefulWidget {
   const ProductListScreen({super.key});
@@ -203,7 +204,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                                             ),
                                             const SizedBox(height: 4),
                                             Text(
-                                              '${p['price'] ?? '0'} VNĐ',
+                                              moneyVnd(p['price']),
                                               style: const TextStyle(
                                                 color: Colors.blueAccent,
                                                 fontSize: 15,

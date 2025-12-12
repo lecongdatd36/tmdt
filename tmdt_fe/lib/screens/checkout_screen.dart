@@ -110,6 +110,11 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         final uri = Uri.parse(url);
         await launchUrl(uri, mode: LaunchMode.externalApplication);
         if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Đã mở VNPAY, vui lòng hoàn tất thanh toán để xác nhận đơn.'),
+            ),
+          );
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (_) => PaymentStatusScreen(orderId: orderId),
